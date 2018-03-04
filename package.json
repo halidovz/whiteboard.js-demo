@@ -1,0 +1,16 @@
+{
+  "name": "@halidovz/3rd",
+  "version": "1.0.0",
+  "description": "just for testing",
+  "dependencies": {
+    "whiteboardjs": "../whiteboard"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.5",
+    "html-webpack-plugin": "^2.30.1",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.7.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
