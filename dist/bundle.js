@@ -81,17 +81,17 @@ if (typeof document !== 'undefined' && typeof window !== 'undefined') {
 }
 else {
   // assume we're running under node.js when document/window are not present
-  fabric.document = __webpack_require__(34)
+  fabric.document = __webpack_require__(33)
     .jsdom(
       decodeURIComponent('%3C!DOCTYPE%20html%3E%3Chtml%3E%3Chead%3E%3C%2Fhead%3E%3Cbody%3E%3C%2Fbody%3E%3C%2Fhtml%3E'),
       { features: {
         FetchExternalResources: ['img']
       }
       });
-  fabric.jsdomImplForWrapper = __webpack_require__(35).implForWrapper;
-  fabric.nodeCanvas = __webpack_require__(36).Canvas;
+  fabric.jsdomImplForWrapper = __webpack_require__(34).implForWrapper;
+  fabric.nodeCanvas = __webpack_require__(35).Canvas;
   fabric.window = fabric.document.defaultView;
-  DOMParser = __webpack_require__(37).DOMParser;
+  DOMParser = __webpack_require__(36).DOMParser;
 }
 
 /**
@@ -28237,7 +28237,7 @@ fabric.util.object.extend(fabric.IText.prototype, /** @lends fabric.IText.protot
 })();
 
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29).Buffer))
 
 /***/ }),
 /* 1 */
@@ -28246,9 +28246,9 @@ fabric.util.object.extend(fabric.IText.prototype, /** @lends fabric.IText.protot
 "use strict";
 
 var root_1 = __webpack_require__(4);
-var toSubscriber_1 = __webpack_require__(21);
-var observable_1 = __webpack_require__(25);
-var pipe_1 = __webpack_require__(26);
+var toSubscriber_1 = __webpack_require__(20);
+var observable_1 = __webpack_require__(24);
+var pipe_1 = __webpack_require__(25);
 /**
  * A representation of any set of values over any amount of time. This is the most basic building block
  * of RxJS.
@@ -28556,12 +28556,12 @@ exports.Observable = Observable;
 
 "use strict";
 
-var isArray_1 = __webpack_require__(22);
-var isObject_1 = __webpack_require__(23);
+var isArray_1 = __webpack_require__(21);
+var isObject_1 = __webpack_require__(22);
 var isFunction_1 = __webpack_require__(5);
 var tryCatch_1 = __webpack_require__(11);
 var errorObject_1 = __webpack_require__(6);
-var UnsubscriptionError_1 = __webpack_require__(24);
+var UnsubscriptionError_1 = __webpack_require__(23);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -29326,7 +29326,7 @@ var Observable_1 = __webpack_require__(1);
 var Subscriber_1 = __webpack_require__(10);
 var Subscription_1 = __webpack_require__(2);
 var ObjectUnsubscribedError_1 = __webpack_require__(15);
-var SubjectSubscription_1 = __webpack_require__(39);
+var SubjectSubscription_1 = __webpack_require__(38);
 var rxSubscriber_1 = __webpack_require__(7);
 /**
  * @class SubjectSubscriber<T>
@@ -29542,18 +29542,10 @@ exports.AbstractModification = AbstractModification;
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(18);
-(function webpackMissingModule() { throw new Error("Cannot find module \"build\""); }());
-
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var whiteboardjs_1 = __webpack_require__(19);
+var whiteboardjs_1 = __webpack_require__(18);
 var whiteboard = new whiteboardjs_1.Whiteboard(document.getElementById("canvas"), window, "canvas");
 var whiteboard2 = new whiteboardjs_1.Whiteboard(document.getElementById("canvas2"), window, "canvas");
 renderTools(whiteboard, "tools1");
@@ -29588,17 +29580,17 @@ function renderTools(whiteboard, containerId) {
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(20);
+__webpack_require__(19);
 var customize_1 = __webpack_require__(13);
 var customize_2 = __webpack_require__(13);
 exports.ObjectInteractive = customize_2.ObjectInteractive;
-var whiteboard_1 = __webpack_require__(38);
+var whiteboard_1 = __webpack_require__(37);
 exports.Whiteboard = whiteboard_1.Whiteboard;
 var fabric_1 = __webpack_require__(0);
 exports.fabric = fabric_1.fabric;
@@ -29606,18 +29598,18 @@ customize_1.customizeFabric();
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Observable_1 = __webpack_require__(1);
-var fromEvent_1 = __webpack_require__(28);
+var fromEvent_1 = __webpack_require__(27);
 Observable_1.Observable.fromEvent = fromEvent_1.fromEvent;
 //# sourceMappingURL=fromEvent.js.map
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29643,7 +29635,7 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29652,7 +29644,7 @@ exports.isArray = Array.isArray || (function (x) { return x && typeof x.length =
 //# sourceMappingURL=isArray.js.map
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29664,7 +29656,7 @@ exports.isObject = isObject;
 //# sourceMappingURL=isObject.js.map
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29695,7 +29687,7 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29727,12 +29719,12 @@ exports.$$observable = exports.observable;
 //# sourceMappingURL=observable.js.map
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var noop_1 = __webpack_require__(27);
+var noop_1 = __webpack_require__(26);
 /* tslint:enable:max-line-length */
 function pipe() {
     var fns = [];
@@ -29758,7 +29750,7 @@ exports.pipeFromArray = pipeFromArray;
 //# sourceMappingURL=pipe.js.map
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29769,17 +29761,17 @@ exports.noop = noop;
 //# sourceMappingURL=noop.js.map
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var FromEventObservable_1 = __webpack_require__(29);
+var FromEventObservable_1 = __webpack_require__(28);
 exports.fromEvent = FromEventObservable_1.FromEventObservable.create;
 //# sourceMappingURL=fromEvent.js.map
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30001,7 +29993,7 @@ exports.FromEventObservable = FromEventObservable;
 //# sourceMappingURL=FromEventObservable.js.map
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30015,9 +30007,9 @@ exports.FromEventObservable = FromEventObservable;
 
 
 
-var base64 = __webpack_require__(31)
-var ieee754 = __webpack_require__(32)
-var isArray = __webpack_require__(33)
+var base64 = __webpack_require__(30)
+var ieee754 = __webpack_require__(31)
+var isArray = __webpack_require__(32)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -31798,7 +31790,7 @@ function isnan (val) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31919,7 +31911,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -32009,7 +32001,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -32018,6 +32010,12 @@ module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ }),
 /* 34 */
@@ -32039,12 +32037,6 @@ module.exports = Array.isArray || function (arr) {
 
 /***/ }),
 /* 37 */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32052,12 +32044,12 @@ module.exports = Array.isArray || function (arr) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var Observable_1 = __webpack_require__(1);
 var Subject_1 = __webpack_require__(14);
-var BehaviorSubject_1 = __webpack_require__(40);
+var BehaviorSubject_1 = __webpack_require__(39);
 var fabric_1 = __webpack_require__(0);
-var brush_1 = __webpack_require__(41);
-var shape_1 = __webpack_require__(43);
-var text_1 = __webpack_require__(47);
-var image_tool_1 = __webpack_require__(48);
+var brush_1 = __webpack_require__(40);
+var shape_1 = __webpack_require__(42);
+var text_1 = __webpack_require__(46);
+var image_tool_1 = __webpack_require__(47);
 var Whiteboard = /** @class */ (function () {
     function Whiteboard(container, window, id) {
         this.objectCounter = 0;
@@ -32296,7 +32288,7 @@ exports.Whiteboard = Whiteboard;
 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32342,7 +32334,7 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32397,7 +32389,7 @@ exports.BehaviorSubject = BehaviorSubject;
 //# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32414,7 +32406,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var abstract_tool_1 = __webpack_require__(3);
-var simple_brush_1 = __webpack_require__(42);
+var simple_brush_1 = __webpack_require__(41);
 var Brush = /** @class */ (function (_super) {
     __extends(Brush, _super);
     function Brush() {
@@ -32521,7 +32513,7 @@ exports.Brush = Brush;
 
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32562,7 +32554,7 @@ exports.SimpleBrush = SimpleBrush;
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32579,9 +32571,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var abstract_tool_1 = __webpack_require__(3);
-var ellipse_1 = __webpack_require__(44);
-var rect_1 = __webpack_require__(45);
-var line_1 = __webpack_require__(46);
+var ellipse_1 = __webpack_require__(43);
+var rect_1 = __webpack_require__(44);
+var line_1 = __webpack_require__(45);
 var Shape = /** @class */ (function (_super) {
     __extends(Shape, _super);
     function Shape(whiteboard) {
@@ -32691,7 +32683,7 @@ exports.Shape = Shape;
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32756,7 +32748,7 @@ exports.Ellipse = Ellipse;
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32798,7 +32790,7 @@ exports.Rect = Rect;
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32842,7 +32834,7 @@ exports.Line = Line;
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32907,7 +32899,7 @@ exports.Text = Text;
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32925,7 +32917,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var abstract_tool_1 = __webpack_require__(3);
 var fabric_1 = __webpack_require__(0);
-var file_dialog_1 = __webpack_require__(49);
+var file_dialog_1 = __webpack_require__(48);
 var ImageTool = /** @class */ (function (_super) {
     __extends(ImageTool, _super);
     function ImageTool(whiteboard) {
@@ -32965,7 +32957,7 @@ exports.ImageTool = ImageTool;
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
